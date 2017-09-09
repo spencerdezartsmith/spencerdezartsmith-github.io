@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rotating Pictures</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<style>
+    	#hero { height:300px; width:960px; }
+        #hero div { position:absolute; z-index: 0; }
+        #hero div.previous { z-index: 1; }
+        #hero div.current { z-index: 2; }
+	</style>
+
+    <script type="text/javascript">
+      $(function() {
+            // create the image rotator
+            setInterval("rotateImages()", 3000);
+      });
+
+      function rotateImages() {
+          var CurPict = $('.current');
+          var NextPict = $('.current').next()
+
+          if (NextPict.length == 0) {
+            NextPict = $('div[id=hero]').children().first()
+          }
+
+		      CurPict.removeClass('current').addClass('previous');
+          NextPict.css({ opacity: 0.0 })
+            .addClass('current')
+            .animate({ opacity: 1.0 }, 1000, function() {
+              CurPict.removeClass('previous');
+            });
+      }
+    </script>
+</head>
+<body>
+    <h1>Pictures Rotating</h1>
+    <div id="hero">
+       <div class="current"><img src="images/Spring.jpg"></div>
+       <div><img src="images/Leaf.jpg"></div>
+       <div><img src="images/Water.jpg"></div>
+       <div><img src="images/Grass.jpg"></div>
+    </div>
+</body>
+</html>
