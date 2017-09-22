@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <title>Homework 3</title>
+     <meta charset="utf-8">
+   <script src="d3.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <script>
+        var data = [1, 2, 3, 4, 5, 6];
+
+        var scale = d3.scaleLinear()
+           .domain([1, 5])
+           .range([0, 500]);
+
+        var color = d3.scaleOrdinal(d3.schemeCategory10)
+
+        d3.select('body')
+          .attr('class', 'pagestyle')
+          .append('div')
+          .html('<h1>Working with D3</h1>')
+          .style({
+            display: 'flex',
+            justifyContent: 'center'
+          })
+
+        var svg = d3.select("body")
+           .append("svg")
+           .attr("width", 700)
+           .attr("height", 250)
+
+        svg.selectAll("rect")
+           .data(data)
+           .enter().append("rect")
+           .attr("x", function (d) { return scale(d); })
+           .attr("y", 30)
+           .attr("width", 40)
+           .attr("height", 40)
+           .style('fill', function(d, i) { return color(i) })
+           .style('stroke', 'black')
+           .style('stroke-width', 4)
+    </script>
+  </body>
+</html>
+
