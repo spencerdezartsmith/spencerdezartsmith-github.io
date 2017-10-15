@@ -141,8 +141,9 @@ App.Views.AddPerson = Backbone.View.extend({
 
 		if (person.isValid()) {
 			this.collection.add(person);
+			$('input').val('');
 		} else {
-			alert('Please fill out all the fields')
+			alert('Please fill out all the fields');
 		}
 	}
 });
