@@ -1,0 +1,43 @@
+[
+  {
+    "title": "Squigz",
+    "image": "squigz.jpg",
+    "description": "Apply pressure to two Squigz. Air rushes out and the fun rushes in! Connecting to each other and to any solid, non-porous surface - Squigz are a species all their own. They flex. They stick. They suck people into creativity.",
+    "price": 49.95
+  },
+  {
+    "title": "Teeter  Popper",
+    "image": "teeterpopper.jpg",
+    "description": "Whether they rock it, roll it, sit in it or stand... kids want to move with Teeter Popper! How wildly fun it is! ",
+    "price": 36.95
+  },
+  {
+    "title": "Inchimals",
+    "image": "inchimals.jpg",
+    "description": "Inchimals are incredibly effective math blocks that teach measurement, number concepts, addition, subtraction, and pre-algebra! It's ideal, educational fun for all ages of children.",
+    "price": 34.95
+  },
+  {
+    "title": "Aircraft Engineer",
+    "image": "aircraftengineer.jpg",
+    "description": "The planes are great for beginning engineers as young as three, because they require no moving parts, motors, batteries, or electrical know-how. The instruction book is also easy to follow, and contains a fun story!",
+    "price": 44.95
+  },
+  {
+    "title": "Dado Squares",
+    "image": "dadosquares.jpg",
+    "description": "Set a pile of Dado Squares out and stand back. What happens? Children reach out and take hold of a learning toy that's a perfect fit for busy hands, unlimited imaginations, and problem-solving growth of young minds!",
+    "price": 22.95
+  },
+  {
+    "title": "Scientific Explorer",
+    "image": "sciencekit.jpg",
+    "description": "Young beginners get a fascinating chance to experience science through real, hands-on experiments.",
+    "price": 18.95},
+  {
+    "title": "Deluxe Eco Robotics",
+    "image": "ecorobotics.jpg",
+    "description": "Engineer moving, rolling, and swimming robots. The process and the creations educate and fascinate the mind!",
+    "price": 36.95
+  }
+]

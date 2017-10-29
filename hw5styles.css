@@ -1,0 +1,91 @@
+body {
+  font-family: 'Raleway', 'sans-serif';
+}
+
+img {
+  height: 80px;
+  width: 80px;
+  border-radius: 10px;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+a:hover {
+  color: #3385ff;
+}
+
+.app-container {
+  padding-right: 100px !important;
+  padding-left: 100px !important;
+  background-color: #ffff99;
+}
+
+.list-container {
+  margin-top: 40px;
+  background-color: #fafafa;
+  border-radius: 10px;
+  padding: 40px;
+  margin: 60px;
+  padding-bottom: 10px;
+  box-shadow: 0px 0px 10px -1px rgba(102, 96, 96, 0.50);
+}
+
+.store-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 74px;
+  height: 140px;
+}
+
+.toy-title {
+  font-weight: 600;
+  font-size: 25px;
+  color: #2e3033;
+}
+
+.price {
+  font-size: 18px;
+}
+
+.toy-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.row {
+  height: 110px;
+}
+
+.image-thumbnail {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.input-group {
+  padding-right: 60px;
+  padding-left: 60px;
+}
+
+div {
+  transition: all linear .5s;
+  opacity: 1;
+}
+
+.ng-hide {
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+
