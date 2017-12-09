@@ -1,0 +1,51 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.eventList {
+  border: 2px solid black;
+  width: 410px;
+}
+
+.event {
+  border-bottom: 2px solid red;
+  display: flex;
+  justify-content: space-between;
+  height: 175px;
+  background-color: #F5F5DC;
+}
+
+.eventName {
+  font-weight: 700;
+  font-size: 21px;
+  padding-bottom: 5px;
+}
+
+.eventPhoto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eventPresenter {
+  color: red;
+  font-style: italic;
+  font-size: 13px;
+}
+
+img {
+  height: 160px;
+  border: 2px solid black;
+  margin: 7px;
+}
+
+.eventDetails {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.saves {
+  padding: 5px;
+}

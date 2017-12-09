@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <!-- React -->
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react.min.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react-dom.min.js"></script>
+      <!-- <script src="https://fb.me/react-15.2.1.min.js"></script>
+      <script src="https://fb.me/react-dom-15.2.1.min.js"></script> -->
+	<!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/6.1.19/browser.js"></script>  -->
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.js"></script>
+        <title>Lab check in</title>
+    </head>
+<body>
+   <div id="main"></div>
+<script type="text/babel">
+
+var App = React.createClass({
+  getInitialState: function() {
+    return {
+      patient: ""
+    };
+  },
+
+  handlePatientChange: function (patient) {
+    this.setState({ patient });
+  },
+
+  capitalizeString: function(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  },
+
+  updateDisplay: function () {
+    const { patient } = this.state
+    return <p>Hello, {patient}, you have now checked in at {this.props.date.toTimeString()}</p>
+  },
+
+  componentDidMount: function () {
+    this.updateDisplay()
+  },
+ 
+  componentDidUpdate: function () { 
+    this.updateDisplay()
+  },
+
+  render: function() {
+    const { patient } = this.state
+    return (
+      <div>
+        <h1>Lab Check in</h1>
+        <label>Choose a name to check in &nbsp;&nbsp;&nbsp;
+          <PatientSel 
+            value={this.state.patient} 
+            onPatientChange={this.handlePatientChange}
+            capitalizeString={this.capitalizeString}
+          />
+          {patient && this.updateDisplay()}
+        </label>
+      </div>
+    )
+  }
+});
+
+var PatientSel = React.createClass({
+  propTypes: {
+    value: React.PropTypes.string.isRequired,
+    onPaitentChange: React.PropTypes.func,
+    capitalizeString: React.PropTypes.func
+  },
+  
+  handleChange: function(e) {
+    e.preventDefault();
+    var patient = this.props.capitalizeString(e.target.value)
+    if (this.props.onPatientChange)
+      this.props.onPatientChange(patient);
+  },
+  
+  render: function() {
+    return (
+      <select value={this.props.value} onChange={this.handleChange}>
+        <option>Select a patient</option>
+        <option value="spencer">Spencer</option>
+        <option value="kelly">Kelly</option>
+        <option value="axel">Axel</option>
+        <option value="shannon">Shannon</option>
+        <option value="david">David</option>
+        <option value="stevie">Stevie</option>		
+        <option value="katy">Katy</option>		
+        <option value="sylvia">Sylvia</option>		
+        <option value="vaibhav">Vaibhav</option>		
+        <option value="Kris">Kris</option>		
+      </select>
+    )
+  }
+});
+
+setInterval(function() {
+  ReactDOM.render(<App date={new Date()}/>, document.querySelector('#main'));
+}, 500)
+
+</script>
+</body>
+</html>
